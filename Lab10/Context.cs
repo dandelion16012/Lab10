@@ -15,9 +15,10 @@ namespace Lab10
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Data Source=lab10.db");
-                //new MySqlServerVersion(new Version(8, 0, 35))
-            //);
+            optionsBuilder.UseMySql(
+            "server=localhost;user=root;password=password;database=Tickers;",
+            new MySqlServerVersion(new Version(8, 0, 35))
+        );
         }
     }
 }
